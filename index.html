@@ -343,117 +343,108 @@
       .t-banner { padding:1.5rem; }
     }
 
-       /* TRUSTED BY */
+    /* TRUSTED BY */
     .trusted-sec {
-      background: var(--warm-gray);
+      background: var(--cream);
       padding: 4rem 3rem;
     }
-
-    .trusted-h {
-      text-align: center;
-      color: var(--cream);
-      margin-bottom: 2.5rem;
-    }
     
-    .trusted-h em {
-      color: var(--o-soft);
-    }
-    
+    /* GRID */
     .logos-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 34px 42px;
-      max-width: 1050px;
+      gap: 22px;
+      max-width: 1000px;
       margin: 0 auto;
-      align-items: center;
     }
     
+    /* BOXES (clean + premium) */
     .logo-item {
+      border-radius: 16px;
+      padding: 20px;
+      height: 140px;
+    
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 90px;
+    
+      background: #f3e3d2;
+      border: 1px solid rgba(200,90,0,0.08);
+    
+      transition: all 0.2s ease;
     }
-
     
     .logo-item:hover {
-      transform: translateY(-3px);
-      border-color: rgba(200,90,0,0.25);
       background: #fff;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+      border-color: rgba(200,90,0,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.05);
     }
     
-     .logo-item a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      text-decoration: none;
-    }
-    
-      .logo-item img {
-      max-height: 78px;
-      max-width: 180px;
+    /* IMAGE */
+    .logo-item img {
+      max-height: 70px;
+      max-width: 150px;
       width: auto;
       height: auto;
       object-fit: contain;
+    
       filter: grayscale(100%);
-      opacity: 0.92;
-      transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
+      opacity: 0.9;
+    
+      transition: all 0.25s ease;
     }
     
     .logo-item:hover img {
       filter: grayscale(0%);
       opacity: 1;
-      transform: scale(1.06);
+      transform: scale(1.05);
     }
-    
-    /* per-logo balancing */
-    .logo-item img[alt="Smile & Grow"] {
-      max-height: 68px;
-    }
-    
-    .logo-item img[alt="Extra Sauce"] {
-      max-height: 92px;
-    }
-    
+       
+       /* TEXT LOGOS */
+    .logo-item img[alt="Smile & Grow"],
     .logo-item img[alt="Dawning Digital"] {
-      max-height: 68px;
+      max-height: 60px;
     }
     
     .logo-item img[alt="Codesmith"] {
-      max-height: 62px;
+      max-height: 55px;
     }
     
-    .logo-item img[alt="Views2Leads"] {
-      max-height: 88px;
+    /* ICON LOGOS */
+    .logo-item img[alt="Extra Sauce"] {
+      max-height: 85px;
     }
     
+    /* SMALL LOGOS */
     .logo-item img[alt="Podcast Guesting Pro"] {
-      max-height: 56px;
+      max-height: 50px;
     }
     
-    .logo-item img[alt="Adamson University"] {
-      max-height: 96px;
+    /* DARK SQUARE LOGO */
+    .logo-item img[alt="Views2Leads"] {
+      max-height: 80px;
     }
     
+    /* SEALS */
+    .logo-item img[alt="Adamson University"],
     .logo-item img[alt="Naga College Foundation"] {
-      max-height: 96px;
+      max-height: 95px;
     }
     
     /* mobile */
     @media (max-width: 768px) {
       .logos-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 28px;
+        gap: 18px;
       }
     
       .logo-item {
-        min-height: 70px;
+        height: 120px;
+        padding: 16px;
       }
     
       .logo-item img {
-        max-width: 140px;
         max-height: 60px;
       }
     }
