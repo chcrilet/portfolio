@@ -344,13 +344,17 @@
     }
 
     /* TRUSTED BY */
-    .trusted-sec { background: var(--cream); }
+    .trusted-sec {
+      background: var(--cream);
+    }
+    
     .logos-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       align-items: center;
     }
+    
     .logo-item {
       border-radius: 14px;
       padding: 18px 20px;
@@ -358,21 +362,39 @@
       align-items: center;
       justify-content: center;
       border: 0.5px solid rgba(200,90,0,0.1);
-      transition: border-color 0.2s, transform 0.15s;
+      transition: transform 0.15s ease, border-color 0.2s ease;
     }
-    .logo-item:hover { border-color: var(--o); transform: translateY(-2px); }
+    
+    .logo-item:hover {
+      border-color: var(--o);
+      transform: translateY(-2px);
+    }
+    
+    .logo-item a {
+      display: block;
+    }
+    
     .logo-item img {
       max-height: 52px;
       max-width: 100%;
       width: auto;
       object-fit: contain;
-      display: block;
+      transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+      opacity: 0.85;
+      filter: grayscale(100%);
     }
-    .logo-dark { background: #1a1a1a; }
-    .logo-light { background: #f5f5f5; }
-    .logo-blue { background: #3A7EE6; }
+    
+    .logo-item:hover img {
+      transform: scale(1.05);
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+    
+    /* MOBILE */
     @media (max-width: 640px) {
-      .logos-grid { grid-template-columns: repeat(2, 1fr); }
+      .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
   </style>
@@ -492,6 +514,67 @@
   </section>
 
   <!-- TRUST BAR -->
+  <section class="sec trusted-sec">
+  <div class="sec-inner">
+    <p class="sec-lbl" style="text-align:center;">trusted by</p>
+    <h2 class="sec-h" style="text-align:center;margin-bottom:2rem;">
+      Brands & teams I’ve <em>worked with</em>
+    </h2>
+
+    <div class="logos-grid">
+
+      <div class="logo-item">
+        <a href="https://smileandgrow.com.au/" target="_blank" rel="noopener noreferrer">
+          <img src="images/smile-and-grow.png" alt="Smile & Grow">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://www.extrasauceagency.com/" target="_blank" rel="noopener noreferrer">
+          <img src="images/extra-sauce.png" alt="Extra Sauce">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://www.dawningdigital.com/" target="_blank" rel="noopener noreferrer">
+          <img src="images/dawning-digital.png" alt="Dawning Digital">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://www.codesmith.io/" target="_blank" rel="noopener noreferrer">
+          <img src="images/codesmith.png" alt="Codesmith">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://www.linkedin.com/company/views2leads/" target="_blank" rel="noopener noreferrer">
+          <img src="images/views2leads.png" alt="Views2Leads">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://www.podcastguesting.pro/" target="_blank" rel="noopener noreferrer">
+          <img src="images/podcast-guesting-pro.png" alt="Podcast Guesting Pro">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://www.adamson.edu.ph/2018/" target="_blank" rel="noopener noreferrer">
+          <img src="images/adamson.png" alt="Adamson University">
+        </a>
+      </div>
+
+      <div class="logo-item">
+        <a href="https://ncf.edu.ph/" target="_blank" rel="noopener noreferrer">
+          <img src="images/ncf.png" alt="Naga College Foundation">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
   <section class="trust-sec">
     <div class="blob" style="width:200px;height:200px;top:-70px;right:-50px;background:#801818;opacity:0.45;border-radius:50%;"></div>
     <div class="blob" style="width:100px;height:100px;bottom:-25px;left:8%;background:var(--o);opacity:0.15;border-radius:50%;"></div>
