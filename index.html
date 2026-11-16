@@ -426,14 +426,14 @@
     /* ── FEATURED WORK ── */
     .work-collage {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       align-items: start;
       gap: 24px;
-      max-width: 940px;
+      max-width: 640px;
       margin: 0 auto;
       padding: 1.5rem 0 0.5rem;
     }
-    .work-collage > .work-card:nth-child(5):last-child { grid-column: 2; }
+    .work-collage > .work-card:nth-child(5):last-child { grid-column: 1 / 3; max-width: 300px; margin: 0 auto; }
     .work-card {
       background: #fff;
       border-radius: 12px;
@@ -447,10 +447,6 @@
     .work-meta { padding: 12px 14px 16px; }
     .work-tag { display: block; font-size: 10px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--o); font-weight: 600; margin-bottom: 5px; }
     .work-cap { font-size: 12.5px; color: var(--ink); line-height: 1.45; }
-    @media (max-width: 860px) {
-      .work-collage { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; }
-      .work-collage > .work-card:nth-child(5):last-child { grid-column: 1 / 3; max-width: 290px; margin: 0 auto; }
-    }
     @media (max-width: 480px) {
       .work-collage { grid-template-columns: 1fr; max-width: 320px; gap: 18px; }
       .work-collage > .work-card:nth-child(5):last-child { grid-column: 1; max-width: 100%; }
